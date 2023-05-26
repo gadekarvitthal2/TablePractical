@@ -1,0 +1,59 @@
+<div *ngIf="observations!==undefined">
+  <div class="container">
+    <div class="main" *ngFor="let observation of observations">
+      <div class="SamplingTime">
+        <tr *ngFor="let item of observation?.Datas; let i = index"[class.selected]="item === selectedItem" (click)="selectItem(item)">
+          <td id="myElement"  (click)="onChangesDetect(item.SamplingTime)">
+            {{ item.SamplingTime}}
+          </td>
+        </tr>
+      </div>
+      <div class="propertyData">
+        <div>
+          <form [formGroup]="formInfo">
+            <div>
+              <label>Project Name</label>
+              <input
+                type="text"
+                value="{{ properties[0].Value }}"
+                formControlName="projectName"
+              />
+            </div>
+            <div>
+              <label>Construction Count</label>
+              <input
+                type="text"
+                value="{{ properties[1].Value }}"
+                formControlName="constructionCount"
+              />
+            </div>
+            <div>
+              <label>Is Construction Completed</label>
+              <input
+                type="checkbox"
+                value="{{ properties[2].Value }}"
+                formControlName="isConstructionCompleted"
+              />
+            </div>
+            <div>
+              <label>Length of the road </label>
+              <input
+                type="number"
+                value="{{ properties[3].Value }}"
+                formControlName="lengthOfTheRoad"
+              />
+            </div>
+            <button
+              class="button-3"
+              (click)="Submit(formInfo.value)"
+              role="button"
+            >
+              Done
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

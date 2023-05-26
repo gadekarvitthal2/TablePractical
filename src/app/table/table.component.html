@@ -1,0 +1,25 @@
+<div class="main">
+  <table class="table">
+    <thead>
+      <tr>
+        <th colspan="1">Sampling Time</th>
+        <th>Project Name</th>
+        <th>Constructor Count</th>
+        <th>Is Constructor Completed</th>
+        <th>Length of the road</th>
+      </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor="let observation of observations">
+      <td >{{ observation.SamplingTime }}</td>
+      <td>{{ getProperty(observation.Properties, 'Project Name') }}</td>
+      <td>{{ getProperty(observation.Properties, 'Construction Count') }}</td>
+      <td>{{ getProperty(observation.Properties, 'Is Construction Completed') }}</td>
+      <td>{{ getProperty(observation.Properties, 'Length of the road') }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<app-edit [formsData]="Data"></app-edit>
+
+

@@ -1,0 +1,73 @@
+.container {
+  border: 2px solid black;
+  margin: 100px 225px;
+}
+.main {
+  display: flex;
+  position: relative;
+  width: 69em;
+  height: 20em;
+}
+.SamplingTime {
+  height: 100%;
+  display: block;
+  position: relative;
+  border-right: 2px solid black;
+}
+.SamplingTime tr {
+  cursor: pointer;
+}
+.SamplingTime td {
+  border: 1px solid black;
+  display: inline-block;
+  padding: 11px;
+}
+.SamplingTime td:hover {
+  background-color: rgb(75, 75, 51);
+  color: white;
+}
+
+.selected {
+  background-color: rgb(75, 75, 51);
+  color: white;
+}
+
+.button-3 {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  text-align: center;
+  text-decoration: none;
+
+  width: 100px;
+  position: absolute;
+  right: 347px;
+  bottom: 45px;
+}
+
+.propertyData {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  padding: 18px 31px;
+  font-size: larger;
+}
+input {
+  padding: 10px;
+  font-size: 19px;
+  border-radius: 8px;
+}
+
+.propertyData div {
+  margin-top: 10px;
+}
