@@ -1,4 +1,7 @@
 <div *ngIf="observations!==undefined">
+  <div class="Heading">
+    <h1>Detailed View</h1>
+  </div>
   <div class="container">
     <div class="main" *ngFor="let observation of observations">
       <div class="SamplingTime">
@@ -11,7 +14,7 @@
       <div class="propertyData">
         <div>
           <form [formGroup]="formInfo">
-            <div>
+            <div class="projectName">
               <label>Project Name</label>
               <input
                 type="text"

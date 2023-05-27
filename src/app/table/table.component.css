@@ -1,7 +1,12 @@
 .main{
-  margin-top: 100px;
+  margin-top: 50px;
 }
-
+.Heading h1{
+  text-align: center;
+  padding-bottom: 23px;
+  font-size: xxx-large;
+  font-family: math;
+}
 .table,
 th,
 td {
